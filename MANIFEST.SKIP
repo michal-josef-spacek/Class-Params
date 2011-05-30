@@ -1,4 +1,4 @@
-\bCVS\b
+^\.git
 \bblib\b
 ^Makefile$
 \.bak$
