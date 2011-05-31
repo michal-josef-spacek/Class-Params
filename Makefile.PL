@@ -11,6 +11,8 @@ WriteMakefile(
 	'NAME' => 'Class::Params',
 	'PREREQ_PM' => {
 		'Error::Pure' => 0.01,
+		'Exporter' => 0,
+		'Readonly' => 0,
 	},
 	'VERSION' => 0.01,
 	'test' => {
