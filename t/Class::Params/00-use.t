@@ -7,8 +7,8 @@ use Test::More 'tests' => 2;
 
 BEGIN {
 
-        # Test.
-        use_ok('Class::Params');
+	# Test.
+	use_ok('Class::Params');
 }
 
 # Test.
