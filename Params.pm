@@ -200,15 +200,15 @@ sub _check_class_one {
  #         'par' => 1
  # }
 
-=head1 SEE ALSO
-
-L<Book>
-
-=head1 REQUIREMENTS
+=head1 DEPENDENCIES
 
 L<Error::Pure(3pm)>,
 L<Exporter(3pm)>,
 L<Readonly(3pm)>.
+
+=head1 SEE ALSO
+
+L<Book>.
 
 =head1 AUTHOR
 
