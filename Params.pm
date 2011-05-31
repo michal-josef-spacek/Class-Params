@@ -118,6 +118,10 @@ sub _check_class_one {
 
 1;
 
+=pod
+
+=encoding utf8
+
 =head1 NAME
 
  Class::Params - Parameter utils for constructor.
@@ -208,7 +212,7 @@ L<Readonly(3pm)>.
 
 =head1 AUTHOR
 
-Michal Spacek L<tupinek@gmail.com>
+Michal Špaček L<tupinek@gmail.com>
 
 =head1 VERSION
 
