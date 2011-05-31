@@ -10,7 +10,7 @@ WriteMakefile(
 	'AUTHOR' => 'Michal Špaček <skim@cpan.org>',
 	'NAME' => 'Class::Params',
 	'PREREQ_PM' => {
-		'Error::Simple::Multiple' => 0.05,
+		'Error::Pure' => 0.01,
 	},
 	'VERSION' => 0.01,
 	'test' => {
