@@ -26,16 +26,19 @@ sub params {
                 my $val = shift @{$input_array};
 
 		# Check key.
-                err "Unknown parameter '$key'." 
-			unless exists $def->{$key}->[0];
+		if (! $def->{$key}->[0]) {
+	                err "Unknown parameter '$key'.";
+		}
 
 		# Check type.
-		err "Bad parameter '$key' type."
-			unless _check_type($val, $def->{$key}->[2]);
+		if (! _check_type($val, $def->{$key}->[2])) {
+			err "Bad parameter '$key' type.";
+		}
 
 		# Check class.
-		err "Bad parameter '$key' class."
-			unless _check_class($val, $def->{$key}->[1]);
+		if (! _check_class($val, $def->{$key}->[1])) {
+			err "Bad parameter '$key' class.";
+		}
 
 		# Add value to class.
 		$self->{$def->{$key}->[0]} = $val;
