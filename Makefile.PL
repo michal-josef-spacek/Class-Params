@@ -22,6 +22,7 @@ WriteMakefile(
 		'Error::Pure' => 0.01,
 		'Exporter' => 0,
 		'Readonly' => 0,
+		'Scalar::Util' => 0,
 	},
 	'VERSION' => 0.01,
 	'test' => {

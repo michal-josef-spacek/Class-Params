@@ -8,6 +8,7 @@ use warnings;
 # Modules.
 use Error::Pure qw(err);
 use Readonly;
+use Scalar::Util qw(blessed);
 
 # Export.
 Readonly::Array our @EXPORT_OK => qw(params);
@@ -112,7 +113,7 @@ sub _check_class {
 # Check ref to class.
 sub _check_class_one {
 	my ($ref, $class) = @_;
-	if (UNIVERSAL::isa($ref, $class)) {
+	if (! blessed ($ref) || ! $ref->isa($class)) {
 		return 1;
 	} else {
 		return 0;
@@ -207,7 +208,8 @@ sub _check_class_one {
 
 L<Error::Pure(3pm)>,
 L<Exporter(3pm)>,
-L<Readonly(3pm)>.
+L<Readonly(3pm)>,
+L<Scalar::Util(3pm)>.
 
 =head1 SEE ALSO
 
