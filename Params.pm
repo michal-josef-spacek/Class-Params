@@ -206,10 +206,10 @@ sub _check_class_one {
 
 =head1 DEPENDENCIES
 
-L<Error::Pure(3pm)>,
-L<Exporter(3pm)>,
-L<Readonly(3pm)>,
-L<Scalar::Util(3pm)>.
+L<Error::Pure>,
+L<Exporter>,
+L<Readonly>,
+L<Scalar::Util>.
 
 =head1 SEE ALSO
 
