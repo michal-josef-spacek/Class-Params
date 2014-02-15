@@ -13,7 +13,7 @@ MANIFEST			This list of files
 META.yml
 Params.pm
 README
-t/Class::Params/00-use.t
-t/Class::Params/01-version.t
-t/Class::Params/02-pod_coverage.t
-t/Class::Params/03-pod.t
+t/Class-Params/00-use.t
+t/Class-Params/01-version.t
+t/Class-Params/02-pod_coverage.t
+t/Class-Params/03-pod.t
