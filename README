@@ -1,0 +1,79 @@
+NAME
+     Class::Params - Parameter utils for constructor.
+
+SYNOPSIS
+     use Class::Params qw(params);
+     params($self, $def, $input_array);
+
+DEFINITION FORMAT
+     There is hash with parameters.
+     internal_name => [real_name, class, possible_types, requirement]
+
+     Example:
+     'par1' => ['_par1', undef, 'SCALAR', 1],
+     'par2' => ['_par2', undef, ['SCALAR', 'HASH'], 0],
+     'par3' => ['_par3', 'Class', ['SCALAR', 'Class'], 0],
+
+SUBROUTINES
+    params($self, $def, $input_array)
+             Check for structure over definition and save input data to $self.
+             Parameters:
+             $self - Structure, for data save.
+             $def - Definition hash ref.
+             $input_array - Array of key-value pairs.
+
+EXAMPLE1
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Class::Params qw(params);
+
+     # Definition.
+     my $self = {};
+     my $def = {
+             'par' => ['par', undef, 'SCALAR', 1],
+     };
+
+     # Check.
+     # output_structure, definition, array of pairs (key, value).
+     params($self, $def, ['bad_par', 1]);
+
+     # Output:
+     # Unknown parameter 'bad_par'.
+
+EXAMPLE2
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Class::Params qw(params);
+
+     # Definition.
+     my $self = {};
+     my $def = {
+             'par' => ['par', undef, 'SCALAR', 1],
+     };
+
+     # Check.
+     # output_structure, definition, array of pairs (key, value).
+     params($self, $def, ['par', 1]);
+
+     # $self = {
+     #         'par' => 1
+     # }
+
+DEPENDENCIES
+    Error::Pure, Exporter, Readonly, Scalar::Util.
+
+SEE ALSO
+    Book.
+
+AUTHOR
+    Michal Špaček skim@cpan.org
+
+VERSION
+    0.01
+
