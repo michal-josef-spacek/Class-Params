@@ -224,6 +224,10 @@ L<https://github.com/tupinek/Class-Params>
 
 Michal Špaček L<skim@cpan.org>
 
+=head1 LICENSE AND COPYRIGHT
+
+BSD license.
+
 =head1 VERSION
 
 0.01
