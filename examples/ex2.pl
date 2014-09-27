@@ -6,6 +6,7 @@ use warnings;
 
 # Modules.
 use Class::Params qw(params);
+use Data::Printer;
 
 # Definition.
 my $self = {};
@@ -17,6 +18,10 @@ my $def = {
 # output_structure, definition, array of pairs (key, value).
 params($self, $def, ['par', 1]);
 
-# $self = {
-#         'par' => 1
+# Dump $self.
+p $self;
+
+# Output:
+# \ {
+#     par   1
 # }

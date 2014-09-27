@@ -189,6 +189,7 @@ sub _check_class_one {
 
  # Modules.
  use Class::Params qw(params);
+ use Data::Printer;
 
  # Definition.
  my $self = {};
@@ -200,8 +201,12 @@ sub _check_class_one {
  # output_structure, definition, array of pairs (key, value).
  params($self, $def, ['par', 1]);
 
- # $self = {
- #         'par' => 1
+ # Dump $self.
+ p $self;
+
+ # Output:
+ # \ {
+ #     par   1
  # }
 
 =head1 DEPENDENCIES
