@@ -152,7 +152,7 @@ sub _check_class_one {
 
 =over 8
 
-=item B<params($self, $def_hr, $params_ar)>
+=item C<params($self, $def_hr, $params_ar)>
 
  Check for structure over definition and save input data to $self.
  Parameters:

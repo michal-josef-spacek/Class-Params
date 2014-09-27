@@ -15,7 +15,7 @@ DEFINITION FORMAT
      'par3' => ['_par3', 'Class', ['SCALAR', 'Class'], 0],
 
 SUBROUTINES
-    params($self, $def_hr, $params_ar)
+    "params($self, $def_hr, $params_ar)"
              Check for structure over definition and save input data to $self.
              Parameters:
              $self - Structure, for data save.
