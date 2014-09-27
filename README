@@ -3,7 +3,7 @@ NAME
 
 SYNOPSIS
      use Class::Params qw(params);
-     params($self, $def_hr, $input_array);
+     params($self, $def_hr, $params_ar);
 
 DEFINITION FORMAT
      There is hash with parameters.
@@ -15,12 +15,12 @@ DEFINITION FORMAT
      'par3' => ['_par3', 'Class', ['SCALAR', 'Class'], 0],
 
 SUBROUTINES
-    params($self, $def_hr, $input_array)
+    params($self, $def_hr, $params_ar)
              Check for structure over definition and save input data to $self.
              Parameters:
              $self - Structure, for data save.
              $def_hr - Definition hash ref.
-             $input_array - Array of key-value pairs.
+             $params_ar - Reference to array of key-value pairs.
 
 EXAMPLE1
      # Pragmas.

@@ -18,13 +18,13 @@ our $VERSION = 0.02;
 
 # Params processing.
 sub params {
-	my ($self, $def_hr, $input_array) = @_;
+	my ($self, $def_hr, $params_ar) = @_;
 
 	# Process params.
 	my @processed = ();
-        while (@{$input_array}) {
-                my $key = shift @{$input_array};
-                my $val = shift @{$input_array};
+        while (@{$params_ar}) {
+                my $key = shift @{$params_ar};
+                my $val = shift @{$params_ar};
 
 		# Check key.
 		if (! $def_hr->{$key}->[0]) {
@@ -133,7 +133,7 @@ sub _check_class_one {
 =head1 SYNOPSIS
 
  use Class::Params qw(params);
- params($self, $def_hr, $input_array);
+ params($self, $def_hr, $params_ar);
 
 =head1 DEFINITION FORMAT
 
@@ -149,13 +149,13 @@ sub _check_class_one {
 
 =over 8
 
-=item B<params($self, $def_hr, $input_array)>
+=item B<params($self, $def_hr, $params_ar)>
 
  Check for structure over definition and save input data to $self.
  Parameters:
  $self - Structure, for data save.
  $def_hr - Definition hash ref.
- $input_array - Array of key-value pairs.
+ $params_ar - Reference to array of key-value pairs.
 
 =back
 

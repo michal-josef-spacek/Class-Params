@@ -1,5 +1,6 @@
 0.02
  - Rename $def variable to better $def_hr.
+ - Rename $input_array variable to better $params_ar.
 
 0.01 2014-09-27T23:22:21+02:00
  - First version.
