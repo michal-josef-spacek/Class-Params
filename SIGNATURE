@@ -1,0 +1,49 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 b47be1d88f06af0304bd8dee3c365afda3c90675 Changes
+SHA1 e274f86dfcc92b6d3243fe3e117da1e4cdfab6c3 LICENSE
+SHA1 b2593a9ea970692cd1717429154fef34c8c3fc26 MANIFEST
+SHA1 4b31dc83786bfdbdfe4c91c44f46dfab2b238dda META.yml
+SHA1 badacc4758e97235b0c716ce5c4ae098e28d1e6c Makefile.PL
+SHA1 92137cf9d474b61fedbf4e75f95a0900f6f36099 Params.pm
+SHA1 1d7fe40804b8d66bd1305e73497914a1a1d19e3e README
+SHA1 c8e88be2e43f3bb9696bfd68a10f6f530844de8f examples/ex1.pl
+SHA1 328f1a72947bbed81158c01c44095d35fc073c3a examples/ex2.pl
+SHA1 9b5001bfa9cf8607b3b3935284d9253e0391c9f1 inc/Module/Install.pm
+SHA1 cab0e564f9bdf658535f683aa197157e06d0dcea inc/Module/Install/Base.pm
+SHA1 a1559b5b3b40f68efbbd256f4fef85970891b3ae inc/Module/Install/Can.pm
+SHA1 f15c1ba85f6d52e70c48c64bf0752c90a4ad66f9 inc/Module/Install/Fetch.pm
+SHA1 eb48df8bafd07c6a862126d9b274df42b4395742 inc/Module/Install/Makefile.pm
+SHA1 95c73873c6c3cb7024614c225c53863e1e90c134 inc/Module/Install/Metadata.pm
+SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
+SHA1 f8b2ae3386f6ba26c33408968a953d450842eade inc/Module/Install/Win32.pm
+SHA1 f302bc703d76299cff243e5b44cecd61aac27b76 inc/Module/Install/WriteAll.pm
+SHA1 ef0b3b44c8ac771be166d06e5325889078c4d799 t/Class-Params/00-use.t
+SHA1 53a491d83e758b92b55fbbf2f5c8e7908b2add3d t/Class-Params/01-version.t
+SHA1 04183925fbc2f66ff9d11a7ca754485d69e4e1e0 t/Class-Params/02-pod_coverage.t
+SHA1 ec9e8db2187d8a544ee44f23fef3832d2064da3c t/Class-Params/03-pod.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJUJyqQAAoJEAwa+cf4dLBaRLIIAJvE56l9EI2vpumGxbpX1xSy
+0kQ9bHYoLHo3FAYri88ik+HztVhYZM+5sK2cW3Fgs/ArxhBw8Qy2k8+FZc1UpZyo
++9curz+Djrt48h3jiilLeQbKD35JwoGBNzZjPSCZNbkqYUZX2HbkT/sNUmt12Z4v
+Fj0tprdbIWQRwp4fflwiCJijRtwn6/nTImS45W4JufWEt2xao8gl4f9dN1V8SHcI
+DW6OShsBmCkD7WTY8ptyPho3xCqCUJatlTe+4UCUmka5xIkrj23TOVhZ8XEwjtrt
+HhdqLIV07Haydq6090ohEiVPS3/U4A1idsAvzmPCap1Sr/bcsWEkhMaLmQ2V6oM=
+=yWxn
+-----END PGP SIGNATURE-----
