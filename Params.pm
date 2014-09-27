@@ -54,6 +54,8 @@ sub params {
 			err "Parameter '$req' is required.";
 		}
 	}
+
+	return;
 }
 
 # Check type.
