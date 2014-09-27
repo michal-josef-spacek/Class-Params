@@ -18,7 +18,7 @@ our $VERSION = 0.02;
 
 # Params processing.
 sub params {
-	my ($self, $def, $input_array) = @_;
+	my ($self, $def_hr, $input_array) = @_;
 
 	# Process params.
 	my @processed = ();
@@ -27,28 +27,28 @@ sub params {
                 my $val = shift @{$input_array};
 
 		# Check key.
-		if (! $def->{$key}->[0]) {
+		if (! $def_hr->{$key}->[0]) {
 	                err "Unknown parameter '$key'.";
 		}
 
 		# Check type.
-		if (! _check_type($val, $def->{$key}->[2])) {
+		if (! _check_type($val, $def_hr->{$key}->[2])) {
 			err "Bad parameter '$key' type.";
 		}
 
 		# Check class.
-		if (! _check_class($val, $def->{$key}->[1])) {
+		if (! _check_class($val, $def_hr->{$key}->[1])) {
 			err "Bad parameter '$key' class.";
 		}
 
 		# Add value to class.
-		$self->{$def->{$key}->[0]} = $val;
+		$self->{$def_hr->{$key}->[0]} = $val;
 
 		# Processed keys.
 		push @processed, $key;
         }
 
-	foreach my $req (map { $def->{$_}->[3] ? $_ : () } keys %{$def}) {
+	foreach my $req (map { $def_hr->{$_}->[3] ? $_ : () } keys %{$def_hr}) {
 		if (! grep { $req eq $_ } @processed) {
 			err "Parameter '$req' is required.";
 		}
@@ -133,7 +133,7 @@ sub _check_class_one {
 =head1 SYNOPSIS
 
  use Class::Params qw(params);
- params($self, $def, $input_array);
+ params($self, $def_hr, $input_array);
 
 =head1 DEFINITION FORMAT
 
@@ -149,12 +149,12 @@ sub _check_class_one {
 
 =over 8
 
-=item B<params($self, $def, $input_array)>
+=item B<params($self, $def_hr, $input_array)>
 
  Check for structure over definition and save input data to $self.
  Parameters:
  $self - Structure, for data save.
- $def - Definition hash ref.
+ $def_hr - Definition hash ref.
  $input_array - Array of key-value pairs.
 
 =back
@@ -170,13 +170,13 @@ sub _check_class_one {
 
  # Definition.
  my $self = {};
- my $def = {
+ my $def_hr = {
          'par' => ['par', undef, 'SCALAR', 1],
  };
 
  # Check.
  # output_structure, definition, array of pairs (key, value).
- params($self, $def, ['bad_par', 1]);
+ params($self, $def_hr, ['bad_par', 1]);
 
  # Output:
  # Unknown parameter 'bad_par'.
@@ -193,13 +193,13 @@ sub _check_class_one {
 
  # Definition.
  my $self = {};
- my $def = {
+ my $def_hr = {
          'par' => ['par', undef, 'SCALAR', 1],
  };
 
  # Check.
  # output_structure, definition, array of pairs (key, value).
- params($self, $def, ['par', 1]);
+ params($self, $def_hr, ['par', 1]);
 
  # Dump $self.
  p $self;

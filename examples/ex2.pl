@@ -10,13 +10,13 @@ use Data::Printer;
 
 # Definition.
 my $self = {};
-my $def = {
+my $def_hr = {
         'par' => ['par', undef, 'SCALAR', 1],
 };
 
 # Check.
 # output_structure, definition, array of pairs (key, value).
-params($self, $def, ['par', 1]);
+params($self, $def_hr, ['par', 1]);
 
 # Dump $self.
 p $self;

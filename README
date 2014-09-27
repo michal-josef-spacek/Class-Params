@@ -3,7 +3,7 @@ NAME
 
 SYNOPSIS
      use Class::Params qw(params);
-     params($self, $def, $input_array);
+     params($self, $def_hr, $input_array);
 
 DEFINITION FORMAT
      There is hash with parameters.
@@ -15,11 +15,11 @@ DEFINITION FORMAT
      'par3' => ['_par3', 'Class', ['SCALAR', 'Class'], 0],
 
 SUBROUTINES
-    params($self, $def, $input_array)
+    params($self, $def_hr, $input_array)
              Check for structure over definition and save input data to $self.
              Parameters:
              $self - Structure, for data save.
-             $def - Definition hash ref.
+             $def_hr - Definition hash ref.
              $input_array - Array of key-value pairs.
 
 EXAMPLE1
@@ -32,13 +32,13 @@ EXAMPLE1
 
      # Definition.
      my $self = {};
-     my $def = {
+     my $def_hr = {
              'par' => ['par', undef, 'SCALAR', 1],
      };
 
      # Check.
      # output_structure, definition, array of pairs (key, value).
-     params($self, $def, ['bad_par', 1]);
+     params($self, $def_hr, ['bad_par', 1]);
 
      # Output:
      # Unknown parameter 'bad_par'.
@@ -54,13 +54,13 @@ EXAMPLE2
 
      # Definition.
      my $self = {};
-     my $def = {
+     my $def_hr = {
              'par' => ['par', undef, 'SCALAR', 1],
      };
 
      # Check.
      # output_structure, definition, array of pairs (key, value).
-     params($self, $def, ['par', 1]);
+     params($self, $def_hr, ['par', 1]);
 
      # Dump $self.
      p $self;
