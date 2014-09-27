@@ -216,6 +216,10 @@ L<Exporter>,
 L<Readonly>,
 L<Scalar::Util>.
 
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/Class-Params>
+
 =head1 AUTHOR
 
 Michal Špaček L<skim@cpan.org>
