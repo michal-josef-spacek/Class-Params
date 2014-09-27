@@ -73,9 +73,6 @@ EXAMPLE2
 DEPENDENCIES
     Error::Pure, Exporter, Readonly, Scalar::Util.
 
-SEE ALSO
-    Book.
-
 AUTHOR
     Michal Špaček skim@cpan.org
 

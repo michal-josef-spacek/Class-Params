@@ -216,10 +216,6 @@ L<Exporter>,
 L<Readonly>,
 L<Scalar::Util>.
 
-=head1 SEE ALSO
-
-L<Book>.
-
 =head1 AUTHOR
 
 Michal Špaček L<skim@cpan.org>
