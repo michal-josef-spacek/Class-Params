@@ -21,6 +21,7 @@ SUBROUTINES
              $self - Structure, for data save.
              $def_hr - Definition hash ref.
              $params_ar - Reference to array of key-value pairs.
+             Returns undef.
 
 EXAMPLE1
      # Pragmas.

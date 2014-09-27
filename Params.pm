@@ -159,6 +159,7 @@ sub _check_class_one {
  $self - Structure, for data save.
  $def_hr - Definition hash ref.
  $params_ar - Reference to array of key-value pairs.
+ Returns undef.
 
 =back
 
