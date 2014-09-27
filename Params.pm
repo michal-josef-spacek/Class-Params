@@ -48,6 +48,7 @@ sub params {
 		push @processed, $key;
         }
 
+	# Check requirement.
 	foreach my $req (map { $def_hr->{$_}->[3] ? $_ : () } keys %{$def_hr}) {
 		if (! grep { $req eq $_ } @processed) {
 			err "Parameter '$req' is required.";
