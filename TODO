@@ -1,8 +1,5 @@
 TODO
 ====
-4. Mozna jsem se unahlil pri odstranovani kontroly trid.
-   Bylo to tam proto, ze potrebuji dovolit pole trid a chci overit, ze v tom
-   poli jsou opravu dane tridy.
 5.
 
 Applied
@@ -14,4 +11,9 @@ OK [20140927] skim
 OK [20140928] skim
 
 3. ERRORS sekce v dokumentaci.
+OK [20140928] skim
+
+4. Mozna jsem se unahlil pri odstranovani kontroly trid.
+   Bylo to tam proto, ze potrebuji dovolit pole trid a chci overit, ze v tom
+   poli jsou opravu dane tridy.
 OK [20140928] skim
