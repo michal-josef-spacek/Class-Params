@@ -19,6 +19,7 @@ is($EVAL_ERROR, "Unknown parameter 'foo'.\n", "Unknown parameter 'foo'.");
 clean();
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'SCALAR', 0],
 };
@@ -30,9 +31,9 @@ is_deeply(
 	},
 	"Right check for parameter 'foo'.",
 );
-$self = {};
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'SCALAR', 1],
 	'bar' => ['_bar', undef, 'SCALAR', 0],
@@ -42,9 +43,9 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'foo' is required.\n", "Parameter 'foo' is required.");
 clean();
-$self = {};
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'SCALAR', 1],
 };
@@ -58,6 +59,7 @@ is_deeply(
 );
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'HASH', 1],
 };
@@ -68,6 +70,7 @@ is($EVAL_ERROR, "Bad parameter 'foo' type.\n", "Bad parameter 'foo' type (HASH).
 clean();
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'HASH', 1],
 };
@@ -83,6 +86,7 @@ is_deeply(
 );
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'ARRAY', 1],
 };
@@ -93,6 +97,7 @@ is($EVAL_ERROR, "Bad parameter 'foo' type.\n", "Bad parameter 'foo' type (ARRAY)
 clean();
 
 # Test.
+$self = {};
 $def_hr = {
 	'foo' => ['_foo', undef, 'ARRAY', 1],
 };
