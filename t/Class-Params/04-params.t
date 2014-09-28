@@ -21,7 +21,7 @@ clean();
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'SCALAR', 0],
+	'foo' => ['_foo', undef, 'SCALAR', 0],
 };
 params($self, $def_hr, ['foo', 'bar']);
 is_deeply(
@@ -35,8 +35,8 @@ is_deeply(
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'SCALAR', 1],
-	'bar' => ['_bar', 'SCALAR', 0],
+	'foo' => ['_foo', undef, 'SCALAR', 1],
+	'bar' => ['_bar', undef, 'SCALAR', 0],
 };
 eval {
 	params($self, $def_hr, ['bar', 'baz']);
@@ -48,7 +48,7 @@ clean();
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'SCALAR', 1],
+	'foo' => ['_foo', undef, 'SCALAR', 1],
 };
 params($self, $def_hr, ['foo', 'bar']);
 is_deeply(
@@ -62,7 +62,7 @@ is_deeply(
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'HASH', 0],
+	'foo' => ['_foo', undef, 'HASH', 0],
 };
 eval {
 	params($self, $def_hr, ['foo', 'bar']);
@@ -74,7 +74,7 @@ clean();
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'HASH', 0],
+	'foo' => ['_foo', undef, 'HASH', 0],
 };
 params($self, $def_hr, ['foo', {'xxx' => 'yyy'}]);
 is_deeply(
@@ -90,7 +90,7 @@ is_deeply(
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'ARRAY', 0],
+	'foo' => ['_foo', undef, 'ARRAY', 0],
 };
 eval {
 	params($self, $def_hr, ['foo', 'bar']);
@@ -102,7 +102,7 @@ clean();
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'ARRAY', 0],
+	'foo' => ['_foo', undef, 'ARRAY', 0],
 };
 params($self, $def_hr, ['foo', ['xxx', 'yyy']]);
 is_deeply(
@@ -116,7 +116,7 @@ is_deeply(
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', ['SCALAR', 'ARRAY'], 0],
+	'foo' => ['_foo', undef, ['SCALAR', 'ARRAY'], 0],
 };
 params($self, $def_hr, ['foo', 'bar']);
 is_deeply(
@@ -138,7 +138,7 @@ is_deeply(
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', ['SCALAR', 'ARRAY'], 0],
+	'foo' => ['_foo', undef, ['SCALAR', 'ARRAY'], 0],
 };
 eval {
 	params($self, $def_hr, ['foo', {}]);
@@ -150,7 +150,7 @@ clean();
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'Moo', 0],
+	'foo' => ['_foo', 'Moo', 'Moo', 0],
 };
 eval {
 	params($self, $def_hr, ['foo', 'bar']);
@@ -162,7 +162,7 @@ clean();
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', 'Moo', 0],
+	'foo' => ['_foo', 'Moo', 'Moo', 0],
 };
 my $moo = bless {}, 'Moo';
 params($self, $def_hr, ['foo', $moo]);

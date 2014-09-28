@@ -7,12 +7,12 @@ SYNOPSIS
 
 DEFINITION FORMAT
      There is hash with parameters.
-     internal_name => [real_name, possible_types, requirement]
+     internal_name => [real_name, class, possible_types, requirement]
 
      Example:
-     'par1' => ['_par1', 'SCALAR', 1],
-     'par2' => ['_par2', ['SCALAR', 'HASH'], 0],
-     'par3' => ['_par3', ['SCALAR', 'Class'], 0],
+     'par1' => ['_par1', undef, 'SCALAR', 1],
+     'par2' => ['_par2', undef, ['SCALAR', 'HASH'], 0],
+     'par3' => ['_par3', 'Class', ['SCALAR', 'Class'], 0],
 
 SUBROUTINES
     "params($self, $def_hr, $params_ar)"
@@ -40,7 +40,7 @@ EXAMPLE1
      # Definition.
      my $self = {};
      my $def_hr = {
-             'par' => ['par', 'SCALAR', 1],
+             'par' => ['par', undef, 'SCALAR', 1],
      };
 
      # Check.
@@ -62,7 +62,7 @@ EXAMPLE2
      # Definition.
      my $self = {};
      my $def_hr = {
-             'par' => ['par', 'SCALAR', 1],
+             'par' => ['par', undef, 'SCALAR', 1],
      };
 
      # Check.
