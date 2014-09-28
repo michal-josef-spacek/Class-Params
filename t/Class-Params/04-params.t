@@ -41,7 +41,8 @@ $def_hr = {
 eval {
 	params($self, $def_hr, ['bar', 'baz']);
 };
-is($EVAL_ERROR, "Parameter 'foo' is required.\n", "Parameter 'foo' is required.");
+is($EVAL_ERROR, "Parameter 'foo' is required.\n",
+	"Parameter 'foo' is required (SCALAR).");
 clean();
 
 # Test.
@@ -61,18 +62,19 @@ is_deeply(
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', undef, 'HASH', 1],
+	'foo' => ['_foo', undef, 'HASH', 0],
 };
 eval {
 	params($self, $def_hr, ['foo', 'bar']);
 };
-is($EVAL_ERROR, "Bad parameter 'foo' type.\n", "Bad parameter 'foo' type (HASH).");
+is($EVAL_ERROR, "Bad parameter 'foo' type.\n",
+	"Bad parameter 'foo' type (HASH).");
 clean();
 
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', undef, 'HASH', 1],
+	'foo' => ['_foo', undef, 'HASH', 0],
 };
 params($self, $def_hr, ['foo', {'xxx' => 'yyy'}]);
 is_deeply(
@@ -82,24 +84,25 @@ is_deeply(
 			'xxx' => 'yyy',
 		},
 	},
-	"Right check for required parameter 'foo' (HASH).",
+	"Right check for parameter 'foo' (HASH).",
 );
 
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', undef, 'ARRAY', 1],
+	'foo' => ['_foo', undef, 'ARRAY', 0],
 };
 eval {
 	params($self, $def_hr, ['foo', 'bar']);
 };
-is($EVAL_ERROR, "Bad parameter 'foo' type.\n", "Bad parameter 'foo' type (ARRAY).");
+is($EVAL_ERROR, "Bad parameter 'foo' type.\n",
+	"Bad parameter 'foo' type (ARRAY).");
 clean();
 
 # Test.
 $self = {};
 $def_hr = {
-	'foo' => ['_foo', undef, 'ARRAY', 1],
+	'foo' => ['_foo', undef, 'ARRAY', 0],
 };
 params($self, $def_hr, ['foo', ['xxx', 'yyy']]);
 is_deeply(
@@ -107,7 +110,7 @@ is_deeply(
 	{
 		'_foo' => ['xxx', 'yyy'],
 	},
-	"Right check for required parameter 'foo' (ARRAY).",
+	"Right check for parameter 'foo' (ARRAY).",
 );
 
 # Test.
