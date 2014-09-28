@@ -6,7 +6,7 @@ use warnings;
 use Class::Params qw(params);
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 
 # Test.
@@ -54,5 +54,53 @@ is_deeply(
 	{
 		'_foo' => 'bar',
 	},
-	"Right check for required parameter 'foo'.",
+	"Right check for required parameter 'foo' (SCALAR).",
+);
+
+# Test.
+$def_hr = {
+	'foo' => ['_foo', undef, 'HASH', 1],
+};
+eval {
+	params($self, $def_hr, ['foo', 'bar']);
+};
+is($EVAL_ERROR, "Bad parameter 'foo' type.\n", "Bad parameter 'foo' type (HASH).");
+clean();
+
+# Test.
+$def_hr = {
+	'foo' => ['_foo', undef, 'HASH', 1],
+};
+params($self, $def_hr, ['foo', {'xxx' => 'yyy'}]);
+is_deeply(
+	$self,
+	{
+		'_foo' => {
+			'xxx' => 'yyy',
+		},
+	},
+	"Right check for required parameter 'foo' (HASH).",
+);
+
+# Test.
+$def_hr = {
+	'foo' => ['_foo', undef, 'ARRAY', 1],
+};
+eval {
+	params($self, $def_hr, ['foo', 'bar']);
+};
+is($EVAL_ERROR, "Bad parameter 'foo' type.\n", "Bad parameter 'foo' type (ARRAY).");
+clean();
+
+# Test.
+$def_hr = {
+	'foo' => ['_foo', undef, 'ARRAY', 1],
+};
+params($self, $def_hr, ['foo', ['xxx', 'yyy']]);
+is_deeply(
+	$self,
+	{
+		'_foo' => ['xxx', 'yyy'],
+	},
+	"Right check for required parameter 'foo' (ARRAY).",
 );
