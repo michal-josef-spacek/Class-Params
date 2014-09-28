@@ -6,7 +6,7 @@ use warnings;
 use Class::Params qw(params);
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 9;
+use Test::More 'tests' => 12;
 use Test::NoWarnings;
 
 # Test.
@@ -109,3 +109,37 @@ is_deeply(
 	},
 	"Right check for required parameter 'foo' (ARRAY).",
 );
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', undef, ['SCALAR', 'ARRAY'], 0],
+};
+params($self, $def_hr, ['foo', 'bar']);
+is_deeply(
+	$self,
+	{
+		'_foo' => 'bar',
+	},
+	"Right check for parameter 'foo' with multiple types (SCALAR).",
+);
+params($self, $def_hr, ['foo', ['xxx', 'yyy']]);
+is_deeply(
+	$self,
+	{
+		'_foo' => ['xxx', 'yyy'],
+	},
+	"Right check for parameter 'foo' with multiple types (ARRAY).",
+);
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', undef, ['SCALAR', 'ARRAY'], 0],
+};
+eval {
+	params($self, $def_hr, ['foo', {}]);
+};
+is($EVAL_ERROR, "Bad parameter 'foo' type.\n",
+	"Bad parameter 'foo' type with multiple types.");
+clean();
