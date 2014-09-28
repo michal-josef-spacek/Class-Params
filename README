@@ -23,6 +23,12 @@ SUBROUTINES
              $params_ar - Reference to array of key-value pairs.
              Returns undef.
 
+ERRORS
+     params():
+             Bad parameter '%s' type.
+             Parameter '%s' is required.
+             Unknown parameter '%s'.
+
 EXAMPLE1
      # Pragmas.
      use strict;

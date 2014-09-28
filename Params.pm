@@ -125,6 +125,13 @@ sub _check_type_one {
 
 =back
 
+=head1 ERRORS
+
+ params():
+         Bad parameter '%s' type.
+         Parameter '%s' is required.
+         Unknown parameter '%s'.
+
 =head1 EXAMPLE1
 
  # Pragmas.

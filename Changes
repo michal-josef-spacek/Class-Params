@@ -1,5 +1,6 @@
 0.02
  - CHANGE API: Simplify definition.
+ - Add ERRORS section to doc.
  - Add tests.
  - Improve comments and doc.
  - Rename $def variable to better $def_hr.
