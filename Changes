@@ -1,4 +1,4 @@
-0.03
+0.03 2014-09-28T11:21:33+02:00
  - CHANGE API: Back to 0.01 version. :/
  - Add EXAMPLE sections to doc.
  - Add tests for class checks.

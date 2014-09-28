@@ -14,15 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 95a816d57beedfa6c9e08d32a3214e188deefc89 Changes
+SHA1 44771a60e53f6f7b7d9cbbd2f3114c7fe838640a Changes
 SHA1 e274f86dfcc92b6d3243fe3e117da1e4cdfab6c3 LICENSE
-SHA1 228078667b260114f2ad840e127a4b883f6213d9 MANIFEST
-SHA1 5cd2f42bf93de588deee2034af8475d45e005455 META.yml
-SHA1 2f575d0736e9dcb13769e76bbb483c318469801b Makefile.PL
-SHA1 3f337b47f9493fa37fce41a93567cc92b5bc41a8 Params.pm
-SHA1 35b5b34ad80aca911d19db0c53dcb22ed4c36e08 README
-SHA1 cc78f8fbd321929fe1f1c8797fe38002b1a20ed2 examples/ex1.pl
-SHA1 a60542e6cfba530fe9e7b3552a11b1bcdcff5118 examples/ex2.pl
+SHA1 b423b2bab40aa3feaa44c4c8e7dd43b725b8e27a MANIFEST
+SHA1 fc42f89f3198cd0052c47328e6ea72040f003a88 META.yml
+SHA1 9f956d17abaabbf35f7e7df784aead825b07eb1d Makefile.PL
+SHA1 9d1bd4883bf78ac5f407fcf7bc48678d9fa11197 Params.pm
+SHA1 b5d4241303a19cfabc5a3aab28b5cd9a7442fdbc README
+SHA1 65e461275809d59c7db695743b60c816737b9e7e examples/ex1.pl
+SHA1 b22ad59ac473ca3e927eabbd66a125ee7b142fc2 examples/ex2.pl
+SHA1 a10dc6f34eed253f24a7dfabe697570265a71f63 examples/ex3.pl
+SHA1 c45fe91dcba275bb496bb0c71ded3e3475124b85 examples/ex4.pl
 SHA1 9b5001bfa9cf8607b3b3935284d9253e0391c9f1 inc/Module/Install.pm
 SHA1 cab0e564f9bdf658535f683aa197157e06d0dcea inc/Module/Install/Base.pm
 SHA1 a1559b5b3b40f68efbbd256f4fef85970891b3ae inc/Module/Install/Can.pm
@@ -33,18 +35,18 @@ SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.p
 SHA1 f8b2ae3386f6ba26c33408968a953d450842eade inc/Module/Install/Win32.pm
 SHA1 f302bc703d76299cff243e5b44cecd61aac27b76 inc/Module/Install/WriteAll.pm
 SHA1 ef0b3b44c8ac771be166d06e5325889078c4d799 t/Class-Params/00-use.t
-SHA1 2f97a66ed576ece1df8a1984da12630a6ae77dec t/Class-Params/01-version.t
+SHA1 e66c05c68659bf074af220ba8a5783bbf7515540 t/Class-Params/01-version.t
 SHA1 04183925fbc2f66ff9d11a7ca754485d69e4e1e0 t/Class-Params/02-pod_coverage.t
 SHA1 ec9e8db2187d8a544ee44f23fef3832d2064da3c t/Class-Params/03-pod.t
-SHA1 f9a91b66f73fed6ab84029e142906a325c06d6b2 t/Class-Params/04-params.t
+SHA1 aa0f4b8d74a9d06c3b2fcd223a8a6a904a594049 t/Class-Params/04-params.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEcBAEBAgAGBQJUJ7uHAAoJEAwa+cf4dLBags4H/jY/idmXroCop5OAX2v/yIu8
-9Lwq5KsjqinWX8ZVTzcyJirt2NHwyYVPFpiEoU728cFLGsoFD0enl6zmaVW9Sl8e
-qJxrU5oA8F/juxV7rr/jC0xf/fvQT2i/uqYEgDHkYkJ3uYyvNi4m594r9EGCKKTJ
-8OzhyVipZg/U7tpDiC0bCsVxxPXA0xqmhsL/8ci3oVq3t37e6SNqsVzF6qfiD9c2
-kZ6E4bkDQZYraYNYRmHAiu+elx9ZRZBhhKYPyY1OXoL5zmSsCrQXcBX0ZY5dvLqS
-FndeoOwJmAjfe2Si6zvb6dJT2hoApkTrBpuqsujdV1V04EM01n8+y0i3mGCHeLA=
-=Bd5c
+iQEcBAEBAgAGBQJUJ9MgAAoJEAwa+cf4dLBaqEQH/AqWp9GuWbpKvm0zzwiZPsqC
+rc5R1INqfvT2z/zb/qpLs2+eWwdGLrI6P2KJ6hRTiTF4HLULTu/7TOeByrnLcMhQ
+mDI8tvSe0WrElhOCgCKeClfow4ajh7SKhxtQkl+v9/06IAcXmue2lzLGGolkrihf
+RzpfXFL5I2bH80F26hUFh14RntKjWI6HsmWGx/GEmh/UsGg0HkRuD3rQ6pITQpUG
+gS3fCRfP5Lt49hQkPZV5GveGlciRjiBU58aFEPRZmL70CDe1UlVyVbG6ttMgH5gL
+224lAIZj94sOZBEtq1To8XDKiWr7132nRs81wWOeYAbxIcny3F1foG4XOimL/bs=
+=m7Sw
 -----END PGP SIGNATURE-----
