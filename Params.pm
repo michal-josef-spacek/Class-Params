@@ -106,7 +106,7 @@ sub _check_class {
 			return 1;
 		# One.
 		} else {
-			return _check_type_one($value, $class);
+			return _check_class_one($value, $class);
 		}
 	} else {
 		return 1;
@@ -117,9 +117,9 @@ sub _check_class {
 sub _check_class_one {
 	my ($ref, $class) = @_;
 	if (! blessed ($ref) || ! $ref->isa($class)) {
-		return 1;
-	} else {
 		return 0;
+	} else {
+		return 1;
 	}
 }
 
