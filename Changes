@@ -1,4 +1,4 @@
-0.02
+0.02 2014-09-28T09:40:50+02:00
  - CHANGE API: Simplify definition.
  - Add ERRORS section to doc.
  - Add tests.
