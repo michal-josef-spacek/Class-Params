@@ -11,7 +11,7 @@ use Data::Printer;
 # Definition.
 my $self = {};
 my $def_hr = {
-        'par' => ['par', undef, 'SCALAR', 1],
+        'par' => ['_par', undef, 'SCALAR', 1],
 };
 
 # Check.
@@ -23,5 +23,5 @@ p $self;
 
 # Output:
 # \ {
-#     par   1
+#     _par   1
 # }

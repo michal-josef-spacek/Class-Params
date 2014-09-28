@@ -182,7 +182,7 @@ sub _check_class_one {
  # Definition.
  my $self = {};
  my $def_hr = {
-         'par' => ['par', undef, 'SCALAR', 1],
+         'par' => ['_par', undef, 'SCALAR', 1],
  };
 
  # Check.
@@ -205,7 +205,7 @@ sub _check_class_one {
  # Definition.
  my $self = {};
  my $def_hr = {
-         'par' => ['par', undef, 'SCALAR', 1],
+         'par' => ['_par', undef, 'SCALAR', 1],
  };
 
  # Check.
@@ -217,7 +217,7 @@ sub _check_class_one {
 
  # Output:
  # \ {
- #     par   1
+ #     _par   1
  # }
 
 =head1 DEPENDENCIES
