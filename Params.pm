@@ -14,7 +14,7 @@ use Scalar::Util qw(blessed);
 Readonly::Array our @EXPORT_OK => qw(params);
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Params processing.
 sub params {
@@ -203,6 +203,6 @@ BSD license.
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
