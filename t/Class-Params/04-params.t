@@ -29,7 +29,7 @@ is_deeply(
 	{
 		'_foo' => 'bar',
 	},
-	"Right check for parameter 'foo'.",
+	"Right check for parameter 'foo' (SCALAR).",
 );
 
 # Test.
