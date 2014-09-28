@@ -6,7 +6,7 @@ use warnings;
 use Class::Params qw(params);
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 12;
+use Test::More 'tests' => 14;
 use Test::NoWarnings;
 
 # Test.
@@ -146,3 +146,30 @@ eval {
 is($EVAL_ERROR, "Bad parameter 'foo' type.\n",
 	"Bad parameter 'foo' type with multiple types.");
 clean();
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', 'Moo', 0],
+};
+eval {
+	params($self, $def_hr, ['foo', 'bar']);
+};
+is($EVAL_ERROR, "Bad parameter 'foo' type.\n",
+	"Bad parameter 'foo' type (Class).");
+clean();
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', 'Moo', 0],
+};
+my $moo = bless {}, 'Moo';
+params($self, $def_hr, ['foo', $moo]);
+is_deeply(
+	$self,
+	{
+		'_foo' => $moo,
+	},
+	"Right check for 'foo' type (Moo class).",
+);
