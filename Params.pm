@@ -220,6 +220,67 @@ sub _check_class_one {
  #     _par   1
  # }
 
+=head1 EXAMPLE3
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Class::Params qw(params);
+
+ # Definition.
+ my $self = {};
+ my $def_hr = {
+         'par' => ['_par', 'Moo', ['ARRAY', 'Moo'], 0],
+ };
+
+ # Fake class.
+ my $moo = bless {}, 'Moo';
+
+ # Check bad 'par' parameter which has bad 'bar' scalar.
+ params($self, $def_hr, ['par', [$moo, 'bar']]);
+
+ # Output like:
+ # Bad parameter 'par' class.
+
+=head1 EXAMPLE4
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Class::Params qw(params);
+ use Data::Printer;
+
+ # Definition.
+ my $self = {};
+ my $def_hr = {
+         'par' => ['_par', 'Moo', ['ARRAY', 'Moo'], 0],
+ };
+
+ # Fake class.
+ my $moo = bless {}, 'Moo';
+
+ # Check right 'par' parameter which has array of 'Moo' objects.
+ params($self, $def_hr, ['par', [$moo, $moo]]);
+
+ # Dump $self.
+ p $self;
+
+ # Output like:
+ # \ {
+ #     _par   [
+ #         [0] Moo  {
+ #             public methods (0)
+ #             private methods (0)
+ #             internals: {}
+ #         },
+ #         [1] var{_par}[0]
+ #     ]
+ # }
+
 =head1 DEPENDENCIES
 
 L<Error::Pure>,
