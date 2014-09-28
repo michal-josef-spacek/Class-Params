@@ -1,6 +1,8 @@
 0.03
  - CHANGE API: Back to 0.01 version. :/
  - Fix Class check.
+ - Rename $class variable to $class_name.
+ - Rename $ref to $class variable.
 
 0.02 2014-09-28T09:40:50+02:00
  - CHANGE API: Simplify definition.

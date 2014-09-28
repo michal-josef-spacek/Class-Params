@@ -93,20 +93,20 @@ sub _check_type_one {
 # Check class.
 # Class: CLASS/undef.
 sub _check_class {
-	my ($value, $class) = @_;
-	if ($class) {
+	my ($value, $class_name) = @_;
+	if ($class_name) {
 
 		# Array.
 		if (ref $value eq 'ARRAY') {
 			foreach (@{$value}) {
-				if (! _check_class($_, $class)) {
+				if (! _check_class($_, $class_name)) {
 					return 0;
 				}
 			}
 			return 1;
 		# One.
 		} else {
-			return _check_class_one($value, $class);
+			return _check_class_one($value, $class_name);
 		}
 	} else {
 		return 1;
@@ -115,8 +115,8 @@ sub _check_class {
 
 # Check ref to class.
 sub _check_class_one {
-	my ($ref, $class) = @_;
-	if (! blessed ($ref) || ! $ref->isa($class)) {
+	my ($class, $class_name) = @_;
+	if (! blessed($class) || ! $class->isa($class_name)) {
 		return 0;
 	} else {
 		return 1;
