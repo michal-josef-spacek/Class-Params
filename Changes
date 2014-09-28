@@ -1,5 +1,6 @@
 0.03
  - CHANGE API: Back to 0.01 version. :/
+ - Add tests for class checks.
  - Fix Class check.
  - Rename $class variable to $class_name.
  - Rename $ref to $class variable.

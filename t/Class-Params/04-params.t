@@ -6,7 +6,7 @@ use warnings;
 use Class::Params qw(params);
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 14;
+use Test::More 'tests' => 18;
 use Test::NoWarnings;
 
 # Test.
@@ -173,3 +173,56 @@ is_deeply(
 	},
 	"Right check for 'foo' type (Moo class).",
 );
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', 'Moo', ['Moo', 'ARRAY'], 0],
+};
+params($self, $def_hr, ['foo', $moo]);
+is_deeply(
+	$self,
+	{
+		'_foo' => $moo,
+	},
+	"Right check for 'foo' type (Moo class).",
+);
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', 'Moo', ['Moo', 'ARRAY'], 0],
+};
+params($self, $def_hr, ['foo', [$moo, $moo]]);
+is_deeply(
+	$self,
+	{
+		'_foo' => [$moo, $moo],
+	},
+	"Right check for 'foo' type (Moo class).",
+);
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', 'Moo', ['Moo', 'ARRAY'], 0],
+};
+eval {
+	params($self, $def_hr, ['foo', [$moo, 'foo']]);
+};
+is($EVAL_ERROR, "Bad parameter 'foo' class.\n",
+	"Bad parameter 'foo' class (SCALAR).");
+clean();
+
+# Test.
+$self = {};
+$def_hr = {
+	'foo' => ['_foo', 'Moo', ['Moo', 'ARRAY'], 0],
+};
+my $baz = bless {}, 'Baz';
+eval {
+	params($self, $def_hr, ['foo', [$moo, $baz]]);
+};
+is($EVAL_ERROR, "Bad parameter 'foo' class.\n",
+	"Bad parameter 'foo' class (Different Class).");
+clean();
