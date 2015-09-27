@@ -1,4 +1,5 @@
 0.04
+ - Improve LICENSE AND COPYRIGHT section in doc.
  - Remove diacritics from author name.
  - Update Module::Install to 1.16 version.
  - Update copyright years.
