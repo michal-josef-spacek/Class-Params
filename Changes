@@ -1,5 +1,6 @@
 0.04
  - Remove diacritics from author name.
+ - Update Module::Install to 1.16 version.
 
 0.03 2014-09-28T11:21:33+02:00
  - CHANGE API: Back to 0.01 version. :/
