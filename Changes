@@ -1,4 +1,5 @@
 0.04
+ - Remove diacritics from author name.
 
 0.03 2014-09-28T11:21:33+02:00
  - CHANGE API: Back to 0.01 version. :/

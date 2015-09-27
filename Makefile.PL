@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Parameter utils for constructor.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Class-Params';
 readme_from 'Params.pm';
