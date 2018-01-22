@@ -1,5 +1,6 @@
 0.05
  - Update Module::Install to 1.19 version.
+ - Update author name.
 
 0.04 2015-09-27T17:49:22+02:00
  - Improve LICENSE AND COPYRIGHT section in doc.

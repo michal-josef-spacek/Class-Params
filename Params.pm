@@ -294,11 +294,11 @@ L<https://github.com/tupinek/Class-Params>
 
 =head1 AUTHOR
 
-Michal Špaček L<skim@cpan.org>
+Michal Josef Špaček L<skim@cpan.org>
 
 =head1 LICENSE AND COPYRIGHT
 
- © Michal Špaček 2011-2015
+ © Michal Josef Špaček 2011-2015
  BSD 2-Clause License
 
 =head1 VERSION
