@@ -1,11 +1,9 @@
 package Class::Params;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use Error::Pure qw(err);
 use Readonly;
 use Scalar::Util qw(blessed);
@@ -13,7 +11,6 @@ use Scalar::Util qw(blessed);
 # Export.
 Readonly::Array our @EXPORT_OK => qw(params);
 
-# Version.
 our $VERSION = 0.05;
 
 # Params processing.
