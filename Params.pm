@@ -151,18 +151,19 @@ sub _check_class_one {
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<params>
 
-=item C<params($self, $def_hr, $params_ar)>
+ params($self, $def_hr, $params_ar);
 
- Check for structure over definition and save input data to $self.
- Parameters:
+Check for structure over definition and save input data to $self.
+
+Parameters:
+
  $self - Structure, for data save.
  $def_hr - Definition hash ref.
  $params_ar - Reference to array of key-value pairs.
- Returns undef.
 
-=back
+Returns undef.
 
 =head1 ERRORS
 

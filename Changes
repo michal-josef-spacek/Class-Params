@@ -2,6 +2,7 @@
  - Fix bugtracker.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Improve SYNOPSIS section in doc.
+ - Rewrite doc to use =head2 in SUBROUTINES section.
  - Update author github username.
  - Update copyright years.
 
