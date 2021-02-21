@@ -169,11 +169,9 @@ sub _check_class_one {
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Params qw(params);
 
  # Definition.
@@ -191,11 +189,9 @@ sub _check_class_one {
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Params qw(params);
  use Data::Printer;
 
@@ -219,11 +215,9 @@ sub _check_class_one {
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Params qw(params);
 
  # Definition.
@@ -243,11 +237,9 @@ sub _check_class_one {
 
 =head1 EXAMPLE4
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Params qw(params);
  use Data::Printer;
 

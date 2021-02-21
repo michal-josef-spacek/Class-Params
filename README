@@ -30,11 +30,9 @@ ERRORS
              Unknown parameter '%s'.
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Class::Params qw(params);
 
      # Definition.
@@ -51,11 +49,9 @@ EXAMPLE1
      # Unknown parameter 'bad_par'.
 
 EXAMPLE2
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Class::Params qw(params);
      use Data::Printer;
 
@@ -78,11 +74,9 @@ EXAMPLE2
      # }
 
 EXAMPLE3
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Class::Params qw(params);
 
      # Definition.
@@ -101,11 +95,9 @@ EXAMPLE3
      # Bad parameter 'par' class.
 
 EXAMPLE4
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Class::Params qw(params);
      use Data::Printer;
 
