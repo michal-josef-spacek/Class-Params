@@ -3,6 +3,7 @@ NAME
 
 SYNOPSIS
      use Class::Params qw(params);
+
      params($self, $def_hr, $params_ar);
 
 DEFINITION FORMAT

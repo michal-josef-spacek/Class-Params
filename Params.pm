@@ -133,6 +133,7 @@ sub _check_class_one {
 =head1 SYNOPSIS
 
  use Class::Params qw(params);
+
  params($self, $def_hr, $params_ar);
 
 =head1 DEFINITION FORMAT
