@@ -287,7 +287,7 @@ L<Scalar::Util>.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Class-Params>
+L<https://github.com/michal-josef-spacek/Class-Params>
 
 =head1 AUTHOR
 

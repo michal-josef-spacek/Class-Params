@@ -140,7 +140,7 @@ DEPENDENCIES
     Error::Pure, Exporter, Readonly, Scalar::Util.
 
 REPOSITORY
-    <https://github.com/tupinek/Class-Params>
+    <https://github.com/michal-josef-spacek/Class-Params>
 
 AUTHOR
     Michal Josef Špaček skim@cpan.org
