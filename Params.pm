@@ -78,6 +78,7 @@ sub _check_type {
 # Check one type.
 sub _check_type_one {
 	my ($value, $type) = @_;
+
 	if (ref $value eq $type 
 		|| ref \$value eq $type) {
 
@@ -91,6 +92,7 @@ sub _check_type_one {
 # Class: CLASS/undef.
 sub _check_class {
 	my ($value, $class_name) = @_;
+
 	if ($class_name) {
 
 		# Array.
@@ -113,6 +115,7 @@ sub _check_class {
 # Check ref to class.
 sub _check_class_one {
 	my ($class, $class_name) = @_;
+
 	if (! blessed($class) || ! $class->isa($class_name)) {
 		return 0;
 	} else {
